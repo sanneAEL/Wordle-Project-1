@@ -1,67 +1,58 @@
-const buttonElements = document.querySelectorAll('button');
-let row = 1;
-let letter = 1;
-let wordArray = 'SUPER';
-const wordElements = document.querySelectorAll('.word-row');
+var col = 1;
+var row = 1;
+var word = 'SUPER';
+var wordArray = word.split('');
+let guessedWord = '';
+let guessedArray = [];
 
-buttonElements.forEach((element) => {
-	element.addEventListener('click', function () {
-		keypress(element.attributes['data-key'].value);
-	});
-});
-
-function populateWord(key) {
-	if (letter < 6) {
-		wordElements[row - 1].querySelectorAll('.word')[letter - 1].innerText = key;
-		letter += 1;
-	}
+function keypress(whichKey) {
+	if (col == 6 || row == 7) return;
+	if (document.getElementById('key' + whichKey).class == 'greyKey') return;
+	document.getElementById('word' + row + col++).innerHTML = whichKey;
 }
 
-function checkWord() {
-	const letterElements = wordElements[row - 1].querySelectorAll('.word');
-
-	letterElements.forEach((element, index) => {
-		const indexOfWord = wordArray
-			.toLowerCase()
-			.indexOf(element.innerText.toLowerCase());
-
-		if (indexOfWord === index) {
-			element.classList.add('correct');
-		} else if (indexOfWord > 0) {
-			element.classList.add('present');
+function enterpress() {
+	if (col != 6 || row == 7) return;
+	// let guessedWord = '';
+	// let guessedArray = [];
+	for (let i = 1; i <= 5; i++) {
+		let letter = document.getElementById('word' + row + i).innerHTML;
+		guessedArray[i - 1] = letter;
+		guessedWord += letter;
+	}
+	if (guessedWord == word) {
+		document.getElementById('h1').innerHTML = 'You Won!';
+		row = 7;
+		return;
+	}
+	if (row == 6) {
+		document.getElementById('h1').innerHTML = 'You lose!';
+		row = 7;
+		return;
+	}
+	for (let i = 0; i < 5; i++) {
+		if (guessedArray[i] == wordArray[i]) {
+			document.getElementById('key' + guessedArray[i]).class = 'greenKey';
+			document.getElementById('word' + row + (i + 1)).style.color = 'white';
+			document.getElementById('word' + row + (i + 1)).style.backgroundColor =
+				'green';
+		} else if (wordArray.includes(guessedArray[i])) {
+			document.getElementById('key' + guessedArray[i]).class = 'yellowKey';
+			document.getElementById('word' + row + (i + 1)).style.color = 'white';
+			document.getElementById('word' + row + (i + 1)).style.backgroundColor =
+				'yellow';
 		} else {
-			element.classList.add('incorrect');
-		}
-	});
-}
-
-function enterWord() {
-	if (letter < 6) {
-		alert(`Not enough letters`);
-	} else {
-		checkWord();
-		row += 1;
-		letter = 1;
-	}
-}
-function deleteLetter() {
-	const letterElements = wordElements[row - 1].querySelectorAll('.word');
-	for (let index = letterElements.length - 1; index >= 0; index--) {
-		const element = letterElements[index];
-		if (element.innerText !== '') {
-			element.innerText = '';
-			letter -= 1;
-			break;
+			document.getElementById('key' + guessedArray[i]).class = 'greyKey';
 		}
 	}
+	row++;
+	col = 1;
 }
 
-function keypress(key) {
-	if (key.toLowerCase() === 'enter') {
-		enterWord();
-	} else if (key.toLowerCase() === '⌫') {
-		deleteLetter();
-	} else {
-		populateWord(key);
+function deletepress() {
+	if (col == 1) {
+		return;
 	}
+	col--;
+	document.getElementById('word' + row + col).innerHTML = ' ';
 }

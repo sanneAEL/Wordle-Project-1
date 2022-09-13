@@ -18,86 +18,89 @@
 			<div class="words-container">
 				<!-- create Tiles -->
 				<div class="word-row">
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
+					<div class="word" id="word11"></div>
+					<div class="word" id="word12"></div>
+					<div class="word" id="word13"></div>
+					<div class="word" id="word14"></div>
+					<div class="word" id="word15"></div>
+				</div>
+
+				<div class="word-row">
+					<div class="word" id="word21"></div>
+					<div class="word" id="word22"></div>
+					<div class="word" id="word23"></div>
+					<div class="word" id="word24"></div>
+					<div class="word" id="word25"></div>
+				</div>
+
+				<div class="word-row">
+					<div class="word" id="word31"></div>
+					<div class="word" id="word32"></div>
+					<div class="word" id="word33"></div>
+					<div class="word" id="word34"></div>
+					<div class="word" id="word35"></div>
 				</div>
 				<div class="word-row">
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
+					<div class="word" id="word41"></div>
+					<div class="word" id="word42"></div>
+					<div class="word" id="word43"></div>
+					<div class="word" id="word44"></div>
+					<div class="word" id="word45"></div>
 				</div>
 				<div class="word-row">
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
+					<div class="word" id="word51"></div>
+					<div class="word" id="word52"></div>
+					<div class="word" id="word53"></div>
+					<div class="word" id="word54"></div>
+					<div class="word" id="word55"></div>
 				</div>
 				<div class="word-row">
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-				</div>
-				<div class="word-row">
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-				</div>
-				<div class="word-row">
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
-					<div class="word"></div>
+					<div class="word" id="word61"></div>
+					<div class="word" id="word62"></div>
+					<div class="word" id="word63"></div>
+					<div class="word" id="word64"></div>
+					<div class="word" id="word65"></div>
 				</div>
 			</div>
 		</div>
 		<br />
 		<!-- create keyboard -->
 		<div class="keyboard">
-			<div class="keyboard-container"></div>
-			<div>
-				<button data-key="Q">Q</button>
-				<button data-key="W">W</button>
-				<button data-key="E">E</button>
-				<button data-key="R">R</button>
-				<button data-key="T">T</button>
-				<button data-key="Y">Y</button>
-				<button data-key="U">U</button>
-				<button data-key="I">I</button>
-				<button data-key="O">O</button>
-				<button data-key="P">P</button>
-			</div>
-			<div>
-				<button data-key="A">A</button>
-				<button data-key="S">S</button>
-				<button data-key="D">D</button>
-				<button data-key="F">F</button>
-				<button data-key="G">G</button>
-				<button data-key="H">H</button>
-				<button data-key="J">J</button>
-				<button data-key="K">K</button>
-				<button data-key="L">L</button>
-			</div>
-			<div>
-				<button data-key="ENTER">ENTER</button>
-				<button data-key="Z">Z</button>
-				<button data-key="X">X</button>
-				<button data-key="C">C</button>
-				<button data-key="V">V</button>
-				<button data-key="B">B</button>
-				<button data-key="N">N</button>
-				<button data-key="M">M</button>
-				<button data-key="⌫">⌫</button>
+			<div class="keyboard-container">
+				<div>
+					<button class="whiteKey" id="keyQ" onClick="keypress('Q')">Q</button>
+					<button class="whiteKey" id="keyW" onClick="keypress('W')">W</button>
+					<button class="whiteKey" id="keyE" onClick="keypress('E')">E</button>
+					<button class="whiteKey" id="keyR" onClick="keypress('R')">R</button>
+					<button class="whiteKey" id="keyT" onClick="keypress('T')">T</button>
+					<button class="whiteKey" id="keyY" onClick="keypress('Y')">Y</button>
+					<button class="whiteKey" id="keyU" onClick="keypress('U')">U</button>
+					<button class="whiteKey" id="keyI" onClick="keypress('I')">I</button>
+					<button class="whiteKey" id="keyO" onClick="keypress('O')">O</button>
+					<button class="whiteKey" id="keyP" onClick="keypress('P')">P</button>
+				</div>
+				<div>
+					<button class="whiteKey" id="keyA" onClick="keypress('A')">A</button>
+					<button class="whiteKey" id="keyS" onClick="keypress('S')">S</button>
+					<button class="whiteKey" id="keyD" onClick="keypress('D')">D</button>
+					<button class="whiteKey" id="keyF" onClick="keypress('F')">F</button>
+					<button class="whiteKey" id="keyG" onClick="keypress('G')">G</button>
+					<button class="whiteKey" id="keyH" onClick="keypress('H')">H</button>
+					<button class="whiteKey" id="keyJ" onClick="keypress('J')">J</button>
+					<button class="whiteKey" id="keyK" onClick="keypress('K')">K</button>
+					<button class="whiteKey" id="keyL" onClick="keypress('L')">L</button>
+				</div>
+				<div>
+					<button data-key="ENTER" onClick="enterpress()">ENTER</button>
+					<button class="whiteKey" id="keyZ" onClick="keypress('Z')">Z</button>
+					<button class="whiteKey" id="keyX" onClick="keypress('X')">X</button>
+					<button class="whiteKey" id="keyC" onClick="keypress('C')">C</button>
+					<button class="whiteKey" id="keyV" onClick="keypress('V')">V</button>
+					<button class="whiteKey" id="keyB" onClick="keypress('B')">B</button>
+					<button class="whiteKey" id="keyN" onClick="keypress('N')">N</button>
+					<button class="whiteKey" id="keyM" onClick="keypress('M')">M</button>
+					<button data-key="⌫" onClick="deletepress()">⌫</button>
+				</div>
 			</div>
 		</div>
 	</body>

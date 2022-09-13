@@ -79,18 +79,18 @@ body{
     border-radius: 4px;
 }
 
-.correct{
+/* .greenKey{
     background-color: green;
     color:white;
 }
 
 
-.present{
+.yellowKey{
 background-color: yellow;
     color: white;
 }
 
-.incorrect{
+.greyKey{
 background-color: gray;
     color: white;
-}
+} */
