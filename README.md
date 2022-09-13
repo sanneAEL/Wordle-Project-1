@@ -3,7 +3,7 @@
 Project Choice
 -Wordle
 
-<img width="667" alt="Screen Shot 2022-09-13 at 10 30 57 AM" src="https://user-images.githubusercontent.com/111710630/189971869-cdd5b94f-ec79-4603-bbd3-2f7f2e1d659f.png">
+<img width="614" alt="Screen Shot 2022-09-13 at 10 40 41 AM" src="https://user-images.githubusercontent.com/111710630/189973019-19bcee6f-e41b-413a-ba6d-cb43c4de2683.png">
 
 Technologies used: html, CSS, Javascript
 
